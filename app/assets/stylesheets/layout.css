@@ -29,15 +29,20 @@ nav {
     background-color: var(--dark-orange);
 }
 
-nav a :hover {
+.brown_hover :hover {
     background-color: var(--dark-brown);
 }
 
 .username {
     margin-left: 3rem;
-    color: #90aead;
+    color: var(--light-aqua);
 }
 
 .user {
     font-size: 2rem;
+}
+
+.user:hover {
+    transition: .3s;
+    color: var(--dirty-white);
 }

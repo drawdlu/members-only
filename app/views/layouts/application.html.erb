@@ -22,6 +22,7 @@
     <%= stylesheet_link_tag "reset" %>
     <%= stylesheet_link_tag "layout" %>
     <%= stylesheet_link_tag "form" %>
+    <%= stylesheet_link_tag "post" %>
     <%= javascript_importmap_tags %>
   </head>
 
@@ -29,14 +30,17 @@
     <nav>
       <% if user_signed_in? %>
         <div class="username">
-          <span class="greet">welcome, </span><span class="user"><%= current_user.username %></span>
+          <span>welcome, </span>
+          <%= link_to root_path, class: "user" do%>
+            <%= current_user.username %>
+          <% end %>
         </div>
-        <%= link_to new_post_path, class: "new_link" do %>
+        <%= link_to new_post_path, class: ["new_link", "brown_hover"] do %>
           <div class="new_post">
             Create Post
           </div>
         <% end %>
-        <%= link_to destroy_user_session_path, data: {
+        <%= link_to destroy_user_session_path, class: "brown_hover", data: {
             turbo_method: :delete } do %>
           <div class="login_logout">
             Logout
