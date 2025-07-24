@@ -2,6 +2,9 @@
 
 <% @post.each do |post| %>
     <div>
+        <% if user_signed_in? %>
+            <h2><%= User.find(post.user_id).username %></h2>
+        <% end %>
         <div> <%= post.title %> </div>
         <div> <%= post.body %> </div>
     </div>
