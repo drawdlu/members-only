@@ -1,11 +1,19 @@
-<h1>Posts Index</h1>
 
-<% @post.each do |post| %>
-    <div>
-        <% if user_signed_in? %>
-            <h2><%= User.find(post.user_id).username %></h2>
-        <% end %>
-        <div> <%= post.title %> </div>
-        <div> <%= post.body %> </div>
-    </div>
-<% end %>
+<div class="grid-container">
+    <% @post.each do |post| %>
+        <div class="card">
+            <div class="posters-name">
+                <% if user_signed_in? %>
+                    <%= User.find(post.user_id).username %>
+                <% end %>
+            </div>
+            <div class="title"> 
+                <%= post.title %> 
+            </div>
+            <div class="body"> 
+                <%= post.body %> 
+            </div>
+        </div>
+    <% end %>
+</div>
+

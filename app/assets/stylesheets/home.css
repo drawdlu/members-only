@@ -1,0 +1,18 @@
+.grid-container {
+    margin: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-auto-rows: 12lh;
+    gap: 3rem;
+}
+
+.card {
+    padding: 2rem;
+    border: 2px solid black;
+}
+
+.posters-name {
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-weight: bold;
+}

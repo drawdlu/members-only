@@ -23,6 +23,7 @@
     <%= stylesheet_link_tag "nav" %>
     <%= stylesheet_link_tag "form" %>
     <%= stylesheet_link_tag "post" %>
+    <%= stylesheet_link_tag "home" %>
     <%= javascript_importmap_tags %>
   </head>
 
@@ -47,7 +48,7 @@
           </div>
         <% end %>
       <% else %>
-        <%= link_to new_user_session_path, id: "login" do %>
+        <%= link_to new_user_session_path, class: "brown_hover", id: "login" do %>
           <div class="login_logout">
             Login
           </div>
