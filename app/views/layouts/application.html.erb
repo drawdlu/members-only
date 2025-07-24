@@ -28,6 +28,14 @@
   <body>
     <nav>
       <% if user_signed_in? %>
+        <div class="username">
+          <span class="greet">welcome, </span><span class="user"><%= current_user.username %></span>
+        </div>
+        <%= link_to new_post_path, class: "new_link" do %>
+          <div class="new_post">
+            Create Post
+          </div>
+        <% end %>
         <%= link_to destroy_user_session_path, data: {
             turbo_method: :delete } do %>
           <div class="login_logout">
@@ -35,7 +43,7 @@
           </div>
         <% end %>
       <% else %>
-        <%= link_to new_user_session_path do %>
+        <%= link_to new_user_session_path, id: "login" do %>
           <div class="login_logout">
             Login
           </div>
