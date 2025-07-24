@@ -8,3 +8,10 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ .alert {
+    margin: 1rem;
+    text-align: center;
+    background-color: var(--dirty-white);
+    color: var(--dark-orange);
+ }
