@@ -10,3 +10,8 @@
 #post_body {
     width: 50ch;
 }
+
+.errors {
+    max-width: 140ch;
+    margin: 1rem auto;
+}
