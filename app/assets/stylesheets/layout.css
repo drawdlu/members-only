@@ -1,0 +1,23 @@
+nav {
+    height: 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--dark-aqua);
+}
+
+.login_logout {
+    margin-right: 5rem;
+    border: 1px solid var(--dirty-white);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background-color: #e64833;
+    font-weight: bold;
+    color: var(--dirty-white);
+    transition: .3s;
+    font-size: 1.1rem;
+}
+
+nav a :hover {
+    background-color: #874f41;
+}

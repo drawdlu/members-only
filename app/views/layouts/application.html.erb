@@ -19,12 +19,34 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "reset" %>
+    <%= stylesheet_link_tag "layout" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <nav>
+      <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path, data: {
+            turbo_method: :delete } do %>
+          <div class="login_logout">
+            Logout
+          </div>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path do %>
+          <div class="login_logout">
+            Login
+          </div>
+        <% end %>
+      <% end %>
+    </nav>
+
+    <div class="alert">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
     <%= yield %>
   </body>
 </html>
